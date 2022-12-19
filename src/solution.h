@@ -19,13 +19,13 @@ class Trie {
 
 public:
     Trie();
- //   void ClearAllNodes(TrieNode* node);
- //   bool isLeaf(TrieNode* node);
+    void ClearAllNodes(TrieNode* node);
+    bool isLeaf(TrieNode* node);
     bool LetterExists(const char letter, TrieNode* curTrie);
     void insert(const char*);
     bool search(const char*);
     Trie& operator=(const Trie& other) = delete;
-  //  ~Trie();
+    ~Trie();
 };
 
 #define WEEK7_TREE_H

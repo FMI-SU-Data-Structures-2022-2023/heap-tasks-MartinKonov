@@ -67,38 +67,38 @@ bool Trie::search(const char* word) {
 
 };
 
-//void Trie::ClearAllNodes(TrieNode* node) {
-//
-//    if (isLeaf(node)) {
-//        node->endOfWord = false;
-//        delete node;
-//        return;
-//    }
-//
-//    for (size_t i = 0; i < 26; i++)
-//    {
-//        if (node->alphabet[i]) {
-//            ClearAllNodes(node->alphabet[i]);
-//        }
-//
-//    }
-//
-//}
-//
-//bool Trie::isLeaf(TrieNode* node) {
-//
-//    for (size_t i = 0; i < 26; i++)
-//    {
-//        if (node->alphabet[i]) {
-//            return false;
-//        }
-//    }
-//    return true;
-//}
-//
-//Trie::~Trie() {
-//
-//
-//    ClearAllNodes(this->first);
-//
-//}
+void Trie::ClearAllNodes(TrieNode* node) {
+
+    if (isLeaf(node)) {
+        node->endOfWord = false;
+        delete node;
+        return;
+    }
+
+    for (size_t i = 0; i < 26; i++)
+    {
+        if (node->alphabet[i]) {
+            ClearAllNodes(node->alphabet[i]);
+        }
+
+    }
+
+}
+
+bool Trie::isLeaf(TrieNode* node) {
+
+    for (size_t i = 0; i < 26; i++)
+    {
+        if (node->alphabet[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+Trie::~Trie() {
+
+
+    ClearAllNodes(this->first);
+
+}
