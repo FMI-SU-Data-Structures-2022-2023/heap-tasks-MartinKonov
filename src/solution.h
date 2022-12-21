@@ -1,4 +1,5 @@
 #ifndef WEEK7_TREE_H
+#include <cstddef>
 
 class Trie {
 
