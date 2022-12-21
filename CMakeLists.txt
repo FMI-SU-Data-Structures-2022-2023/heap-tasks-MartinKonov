@@ -15,7 +15,7 @@ target_sources(
 		src/solution.cpp
 		src/solution.h
 		src/Heap.hpp
-)
+ )
 
 
 # Executable target for the application
@@ -33,7 +33,7 @@ target_sources(
 	PRIVATE
 		src/application.cpp
 		src/Heap.hpp
-)
+ )
 
 
 #
@@ -68,7 +68,7 @@ target_sources(
 	testing
 	PRIVATE
 		test/solution.cpp
-)
+ )
 
 
 # Automatically register all tests
